@@ -7,6 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
   <title>Frontend Mentor | Expenses chart component</title>
 
@@ -25,29 +26,66 @@
 
 <body>
 
-  My balance
-  $921.48
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-left">
+          <h4>My balance</h4>
+          <h1> $921.48</h1>
+        </div>
+        <div class="card-right">
+          <img src="./images/logo.svg" alt="">
+        </div>
+      </div>
+      <div class="card-content">
+        <div class="card-body">
+          <h1>Spending - Last 7 days</h1>
+          <canvas class="chart" height="300px" id="chart"></canvas>
+        </div>
 
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
+        <div class="card-footer">
+          <div class="left">
+            <h4>Total this month</h4>
+            <h1>$478.33</h1>
+          </div>
+          <div class="right">
+            <h3>+2.4%</h3>
+            <p>from last month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Rushclin Takam</a>.
   </div>
+  <script type="text/javascript" src="./assets/js/Chart.min.js"></script>
+  <script type="text/javascript" src="./assets/js/script.js"></script>
+  <!--   <script>
+    let label = ['Lun', 'Mar', 'Mer', 'Jeu']
+
+    let itemData = [10, 6, 25, 15]
+
+    const data = {
+      labels: label,
+      datasets: [{
+        data: itemData,
+        backgroundColor: 'red'
+      }]
+    }
+
+    const config = {
+      type: 'bar',
+      data: data
+    }
+
+    const chart = new Chart(
+      document.getElementById('chart'),
+      config
+    )
+  </script> -->
 </body>
 
 </html>
